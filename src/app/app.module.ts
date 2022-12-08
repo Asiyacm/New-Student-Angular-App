@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 const myRoute:Routes=[
   {
-    path: "add",
+    path: "",
     component:AddStudentComponent
   },
   {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-search-student',
@@ -7,15 +8,32 @@ import { Component } from '@angular/core';
 })
 export class SearchStudentComponent {
 
+  constructor(private api:ApiService){}
+
   name=""
-  
+
+searchData:any=[]
 
   readValue=()=>
   {
-    let search={
+    let data={
       "name": this.name
   }
-  console.log(search)
+  console.log(data)
+  this.api.searchStudent(data).subscribe(
+    (response:any)=>
+    {
+      console.log(response)
+    
+      if (response.length==0) {
+        alert("Invalid student name")
+        
+      } else {
+        
+        this.searchData=response
+      }
 
+}
+  )
 }
 }

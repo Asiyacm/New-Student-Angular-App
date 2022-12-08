@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { FormsModule } from '@angular/forms';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { SearchStudentComponent } from './search-student/search-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
-    ViewStudentComponent
+    ViewStudentComponent,
+    SearchStudentComponent
   ],
   imports: [
     BrowserModule,

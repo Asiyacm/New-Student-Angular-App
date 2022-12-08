@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-student',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class ViewStudentComponent {
 
+  constructor(private api:ApiService){
+
+    api.fetchStudent().subscribe(
+
+
+      (output)=>{
+
+        this.students=output
+
+      }
+    )
+  }
+
   students:any=[]
-  
+
 }

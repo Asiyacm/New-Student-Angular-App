@@ -9,6 +9,7 @@ import { ViewStudentComponent } from './view-student/view-student.component';
 import { SearchStudentComponent } from './search-student/search-student.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const myRoute:Routes=[
@@ -38,7 +39,8 @@ const myRoute:Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
